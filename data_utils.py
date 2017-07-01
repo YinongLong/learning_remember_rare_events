@@ -159,7 +159,7 @@ def write_datafiles(directory, write_file,
 
     images_np = np.zeros([len(images), imgwidth, imgheight], dtype=np.bool)
     labels_np = np.zeros([len(labels)], dtype=np.uint32)
-    for i in xrange(len(images)):
+    for i in range(len(images)):
         images_np[i, :, :] = images[i]
         labels_np[i] = labels[i]
 
@@ -239,5 +239,4 @@ def main(unused_argv):
 
 
 if __name__ == '__main__':
-    # tf.app.run()
-    crawl_directory('C:/Users/YinongLong/Downloads/images_background', augment_with_rotations=True, first_label=0)
+    tf.app.run()
